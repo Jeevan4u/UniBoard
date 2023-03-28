@@ -1,0 +1,18 @@
+// .sidebar {
+//   max-width: 256px;
+//   overflow-y: scroll;
+
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   scrollbar-width: 0px;
+// }
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

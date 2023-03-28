@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[role='tooltip'] {
+  background-color: rgb(107 114 128);
+}
+
+input,
+textarea,
+select {
+  border: 1px solid rgb(203, 213, 225);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out;
+}
+@layer components {
+}
+.ck-editor__main .ck-content {
+  background-color: initial !important ;
+  min-height: 200px;
+}
+@layer utilities {
+  .btn-primary {
+    @apply px-4 py-1 bg-green-500 text-white border-transparent rounded-md cursor-pointer;
+  }
+  .btn-secondary {
+    @apply px-4 py-1 bg-red-500 text-white rounded-md;
+  }
+  /* this style is for  react select style */
+  /* .css-13cymwt-control {
+    @apply dark:bg-gray-700;
+  } */
+}
+[aria-invalid='true'] {
+  border: solid 1px rgb(239, 68, 68);
+}

@@ -1,0 +1,205 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+body {
+  font-size: 25px;
+}
+
+.border {
+  border: 2px solid purple !important;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #f0f3f5;
+}
+
+// Remove arrow from input number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.border-danger {
+  border: 1px solid #a41120 !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.after-before {
+  position: relative;
+  // height: 40px;
+
+  &.up::before {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="black" d="m7 14l5-5l5 5z"%2F%3E%3C%2Fsvg%3E');
+  }
+
+  &::before {
+    position: absolute;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="grey" d="m7 14l5-5l5 5z"%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    content: "";
+    z-index: 1;
+    right: 0;
+    bottom: 40%;
+  }
+
+  &.down:after {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="black" d="m7 10l5 5l5-5H7z"%2F%3E%3C%2Fsvg%3E');
+  }
+
+  &::after {
+    position: absolute;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="grey" d="m7 10l5 5l5-5H7z"%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    content: "";
+    z-index: 1;
+    right: 0;
+    top: 40%;
+  }
+}
+
+.outer-margin {
+  margin: 0px -1rem;
+  width: calc(100% + 2rem);
+
+  tr {
+    th {
+      &:first-child {
+        padding-left: 16px;
+      }
+
+      &:last-child {
+        padding-right: 16px;
+
+        &.after-before {
+          position: relative;
+          height: 40px;
+
+          &.up::before {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="black" d="m7 14l5-5l5 5z"%2F%3E%3C%2Fsvg%3E');
+          }
+
+          &::before {
+            position: absolute;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="grey" d="m7 14l5-5l5 5z"%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: transparent;
+            width: 16px;
+            height: 16px;
+            content: "";
+            z-index: 1;
+            right: 16px;
+            bottom: 40%;
+          }
+
+          &.down:after {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="black" d="m7 10l5 5l5-5H7z"%2F%3E%3C%2Fsvg%3E');
+          }
+
+          &::after {
+            position: absolute;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="grey" d="m7 10l5 5l5-5H7z"%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: transparent;
+            width: 16px;
+            height: 16px;
+            content: "";
+            z-index: 1;
+            right: 16px;
+            top: 40%;
+          }
+        }
+      }
+    }
+
+    td {
+      &:first-child {
+        padding-left: 16px;
+      }
+
+      &:last-child {
+        padding-right: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+  //   margin-top: 10px;
+  //   position: absolute;
+  //   bottom: 0px;
+  //   width: 100%;
+
+  .content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 10px;
+    .logo-container {
+      display: flex;
+      column-gap: 10px;
+
+      .logo {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: top;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    span {
+      display: flex;
+      p {
+        font-size: 14px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.admin-footer {
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
